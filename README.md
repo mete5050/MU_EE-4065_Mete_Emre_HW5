@@ -9,21 +9,6 @@ This repository implements **Keyword Spotting (KWS)** and **Handwritten Digit Re
 
 As per the homework requirements, **offline datasets** (static C arrays) are used to validate model inference on the microcontroller without external sensors .
 
-## Repository Structure
-```text
-.
-├── Python_Training/           # Training scripts & Result Screenshots
-│   ├── train_kws.py           # Q1: Training with Pruning
-│   ├── train_mnist.py         # Q2: Training with Quantization
-│   ├── Q1_Inference_Result.png
-│   └── Q2_Training_Result.png
-├── STM32_Project/             # STM32CubeIDE Project
-│   ├── Core/Src/main.c        # Main application logic
-│   ├── Core/Inc/offline_data.h # Q1 Test Data
-│   └── Core/Inc/digit_data.h   # Q2 Test Data
-└── README.md
-
-
 Implementation Details
 Q1: Keyword Spotting (Section 12.8) 
 
