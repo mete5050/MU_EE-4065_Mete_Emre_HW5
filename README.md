@@ -11,6 +11,7 @@ As per the homework requirements, **offline datasets** (static C arrays) are use
 
 Implementation Details
 Q1: Keyword Spotting (Section 12.8) 
+<img width="520" height="335" alt="Ekran görüntüsü 2026-01-02 223140" src="https://github.com/user-attachments/assets/7d13cb60-6571-46b2-bf41-fff39cff2452" />
 
 Method: CNN with Polynomial Decay Pruning (50-80% sparsity) to optimize Flash usage.
 
@@ -19,6 +20,7 @@ Validation: Validated using a simulated MFCC input buffer via offline_data.h.
 Result: Successful detection of "YES" keyword (See Q1_Inference_Result.png).
 
 Q2: Digit Recognition (Section 12.9) 
+<img width="1491" height="95" alt="Ekran görüntüsü 2026-01-02 223715" src="https://github.com/user-attachments/assets/4b7d3cd9-a7c0-45dd-98f3-d0fb153c77f4" />
 
 Method: CNN trained on MNIST and converted using Dynamic Range Quantization (Int8).
 
