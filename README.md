@@ -5,25 +5,31 @@
 **Student:** [Adın Soyadın] - [Öğrenci Numaran]
 
 ## Project Description
-This repository implements **Keyword Spotting (KWS)** and **Handwritten Digit Recognition (MNIST)** applications on STM32, based on the course textbook (Ünsalan et al., 2025) .
+This repository implements **Keyword Spotting (KWS)** and **Handwritten Digit Recognition (MNIST)** applications on STM32. As per the homework requirements, **offline datasets** (static C arrays) are used to validate model inference on the microcontroller without external sensors.
 
-As per the homework requirements, **offline datasets** (static C arrays) are used to validate model inference on the microcontroller without external sensors .
+---
 
-Implementation Details
-Q1: Keyword Spotting (Section 12.8) 
-<img width="520" height="335" alt="Ekran görüntüsü 2026-01-02 223140" src="https://github.com/user-attachments/assets/7d13cb60-6571-46b2-bf41-fff39cff2452" />
+## Q1: Keyword Spotting (Section 12.8)
 
-Method: CNN with Polynomial Decay Pruning (50-80% sparsity) to optimize Flash usage.
+**Method:** CNN with **Polynomial Decay Pruning** (50-80% sparsity) to optimize Flash usage.
+**Input:** Simulated MFCC input buffer via `offline_data.h`.
+**Result:** Successful detection of "YES" keyword with high confidence.
 
-Validation: Validated using a simulated MFCC input buffer via offline_data.h.
+### Q1 Inference Output:
+<img width="520" alt="Q1 Result" src="https://github.com/user-attachments/assets/7d13cb60-6571-46b2-bf41-fff39cff2452" />
 
-Result: Successful detection of "YES" keyword (See Q1_Inference_Result.png).
+---
 
-Q2: Digit Recognition (Section 12.9) 
-<img width="1491" height="95" alt="Ekran görüntüsü 2026-01-02 223715" src="https://github.com/user-attachments/assets/4b7d3cd9-a7c0-45dd-98f3-d0fb153c77f4" />
+## Q2: Handwritten Digit Recognition (Section 12.9)
 
-Method: CNN trained on MNIST and converted using Dynamic Range Quantization (Int8).
+**Method:** CNN trained on MNIST and converted using **Dynamic Range Quantization** (Int8).
+**Input:** A digit '7' sample extracted from MNIST test set via `digit_data.h`.
+**Result:** ~98% accuracy on validation set.
 
-Validation: Validated using a digit '7' sample from MNIST test set via digit_data.h.
+### Q2 Training & Validation Output:
+<img width="1491" alt="Q2 Result" src="https://github.com/user-attachments/assets/4b7d3cd9-a7c0-45dd-98f3-d0fb153c77f4" />
 
-Result: ~98% accuracy on validation set (See Q2_Training_Result.png).
+---
+
+**Reference:**
+C. Ünsalan, B. Höke, and E. Atmaca, *Embedded Machine Learning with Microcontrollers: Applications on STM32 Boards*, Springer Nature, 2025.
