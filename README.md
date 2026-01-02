@@ -1,9 +1,6 @@
-# EE4065 Homework 5 - Embedded AI Applications
+# EE4065 Homework 5
 
 **Course:** EE 4065 - Embedded Digital Image Processing
-**Due Date:** Jan 2, 2026
-**Student:** [Adın Soyadın] - [Öğrenci Numaran]
-
 ## Project Description
 This repository implements **Keyword Spotting (KWS)** and **Handwritten Digit Recognition (MNIST)** applications on STM32. As per the homework requirements, **offline datasets** (static C arrays) are used to validate model inference on the microcontroller without external sensors.
 
